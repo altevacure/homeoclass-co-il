@@ -1,0 +1,11 @@
+# Секреты и данные клиентов в репозиторий не попадают
+*.env
+.env*
+wp-config.php
+*.sql
+*.sql.gz
+*.zip
+*.log
+backup-*
+clients/
+secrets/
