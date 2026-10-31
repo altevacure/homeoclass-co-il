@@ -19,7 +19,8 @@ update_post_meta( $id, '_mail', wp_slash( array(
 	'sender'             => 'הומאופתיה לעם <ask@homeoclass.co.il>',
 	'recipient'          => '[_site_admin_email]',
 	'body'               => $mail,
-	'additional_headers' => 'Reply-To: [your-email]',
+	'additional_headers' => "Reply-To: [your-email]
+Bcc: homeoclass3@gmail.com",
 	'attachments'        => '',
 	'use_html'           => true,
 	'exclude_blank'      => false,
