@@ -24,11 +24,11 @@ add_action( 'admin_bar_menu', function ( $bar ) {
 	$now  = time();
 
 	if ( $from && $from > $now ) {
-		$title = 'הגישה שלכם תתחיל בעוד ' . hco_left_text( $from - $now );
+		$title = 'האזור יהיה זמין בעוד ' . hco_left_text( $from - $now );
 	} elseif ( $to && $to > $now ) {
 		$title = 'האזור זמין עוד ' . hco_left_text( $to - $now );
 	} elseif ( $to && $to <= $now ) {
-		$title = 'הגישה שלכם הסתיימה';
+		$title = 'האזור כבר לא זמין';
 	} else {
 		return;
 	}
