@@ -2,7 +2,8 @@
 /**
  * Plugin Name: Переводы на иврит — комментарии кабинета
  * Description: В теме Kadence нет языкового пакета he_IL, поэтому строки блока комментариев
- *              (а в кабинете консультации это и есть переписка) остаются английскими.
+ *              (а в кабинете консультации это и есть переписка) остаются английскими. То же с
+ *              письмами Comment Mail (домен comment-mail).
  *              Здесь подменяются только они. Когда появится полный перевод, файл можно удалить.
  * Version: 1.0
  */
@@ -33,3 +34,19 @@ add_filter( 'ngettext', function ( $translated, $single, $plural, $number, $doma
 	}
 	return $translated;
 }, 10, 5 );
+
+add_filter( 'gettext', function ( $translated, $text, $domain ) {
+	static $map = array(
+		'Jump to Thread'                                   => 'מעבר לשיחה',
+		'Continue Reading'                                 => 'המשך קריאה',
+		'Reply to'                                         => 'מענה ל',
+		'Reply'                                            => 'מענה',
+		'— or simply reply to this email'                  => '— או פשוט השיבו למייל הזה',
+		'Please Note:'                                     => 'שימו לב:',
+		'Your reply will be posted publicly and immediately.' => 'התשובה שלכם תופיע מיד באזור האישי.',
+	);
+	if ( 'comment-mail' === $domain && isset( $map[ $text ] ) ) {
+		return $map[ $text ];
+	}
+	return $translated;
+}, 10, 3 );
