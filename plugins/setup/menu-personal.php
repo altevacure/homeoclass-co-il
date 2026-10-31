@@ -1,7 +1,8 @@
 <?php
 /**
- * Добавляет в меню Main пункт «אזור אישי» (последним). Идемпотентно.
- * Адрес подменяется на лету плагином hco-personal-menu.php.
+ * Пункт меню Main для входа и выхода (плагин Login Logout Menu). Идемпотентно.
+ * Гость видит текст до « | », вошедший после него; ссылка #loginpress-loginlogout# подменяется плагином.
+ * Прежний пункт hco-personal (подмена адреса по роли) удаляется.
  * wp eval-file menu-personal.php
  */
 $menu = wp_get_nav_menu_object( 'Main' );
@@ -10,18 +11,22 @@ if ( ! $menu ) {
 	return;
 }
 
+$title = 'כניסה לאזור האישי | יציאה מהאזור האישי';
+$found = 0;
+
 foreach ( wp_get_nav_menu_items( $menu->term_id ) as $it ) {
 	if ( in_array( 'hco-personal', (array) $it->classes, true ) ) {
-		echo "already exists id={$it->ID}\n";
-		return;
+		wp_delete_post( $it->ID, true );
+		echo "removed old item {$it->ID}\n";
+	} elseif ( '#loginpress-loginlogout#' === $it->url ) {
+		$found = $it->ID;
 	}
 }
 
-$id = wp_update_nav_menu_item( $menu->term_id, 0, array(
-	'menu-item-title'   => 'אזור אישי',
-	'menu-item-url'     => '#hco-personal',
-	'menu-item-classes' => 'hco-personal',
-	'menu-item-status'  => 'publish',
-	'menu-item-type'    => 'custom',
+$id = wp_update_nav_menu_item( $menu->term_id, $found, array(
+	'menu-item-title'  => $title,
+	'menu-item-url'    => '#loginpress-loginlogout#',
+	'menu-item-status' => 'publish',
+	'menu-item-type'   => 'custom',
 ) );
-echo is_wp_error( $id ) ? 'ERR ' . $id->get_error_message() . "\n" : "added id=$id\n";
+echo is_wp_error( $id ) ? 'ERR ' . $id->get_error_message() . "\n" : "item id=$id\n";
