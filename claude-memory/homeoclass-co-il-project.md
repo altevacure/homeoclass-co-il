@@ -22,3 +22,14 @@ metadata:
 с пометкой «требует вычитки носителем». Данные клиентов в России не собирать, пока
 юрист не подтвердил схему. Связано: [[tutor-homeoclass-ru-site]] (в соседнем
 репозитории curshen_info).
+
+## Lt и общий опросник (31.10.2026)
+На сайте стоят плагины `lt` 1.0.20, `contact-form-7` 6.1.6, `git-updater`, `codestar-framework`, `logged-in-user-shortcode` (теги `[loggedin]`/`[loggedout]`), скопированные с tutor на самом сервере. Каталог wordpress.org CF7 не отдал, поэтому он тоже с tutor. Комментарий-плагин Comment Mail Pro и Advanced Forms не ставились. Клиенты в Lt — роль `subscriber`, врачи — роль `homeopath` (создана, прав только read). `student` остаётся ролью закрытой категории Workbook, с Lt не связана.
+
+mu-плагины сайта: `workbook-restrict`, `cf7-inline-registration` (тексты ошибок на иврите; регистрация идёт из опросника, поле `reg-password`), `lt-private-consultations`, `lt-admin-lock`, `he-strings` (английские строки комментариев Kadence, пакета he_IL у темы нет). Остальные mu-плагины tutor пока не переносил: `lt-anketa-privacy` (в нём русские подписи полей, под иврит надо переписать), `lt-role-redirects`, оплата ЮMoney.
+
+Настройки Lt: `plugins/setup/lt-config.php` (сроки 7 дней, редиректы, письма на иврите; страница «הארכת גישה», слаг `renew`, пока пустая). Опросник: форма CF7 28 «שאלון ראשוни כללי», страница `/general-primary/` (29), файлы в `plugins/forms/`, создание — `plugins/setup/forms-setup.php`. 11 вопросов, письмо врачу от ask@homeoclass.co.il. Проверено боем: тестовая заявка создала пользователя, консультацию (тип `discursion`, слаг `дата-имя`) и первый комментарий с анкетой; тестовые данные удалены.
+
+Грабли: после установки Lt нужен `wp rewrite flush`, иначе консультация даёт 404. Для показа переписки в теме нужен `discursion_comments=1` (theme mod Kadence). `wp post list --post_type=discursion` в CLI пуст, запросы — только SQL.
+
+Не сделано: тексты политики конфиденциальности и согласия (ссылка в опроснике ведёт на заглушку `/privacy-policy/`), оплата, страница продления, письма клиенту, вычитка иврита детьми Егуды, остальные опросники.

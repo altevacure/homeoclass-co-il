@@ -1,0 +1,37 @@
+<strong>שאלון ראשוני כללי</strong>
+מאת: [your-name] [your-surname] [your-email]
+עבור: [for-whom]
+גיל: [age]
+
+1. מה מביא אתכם ומאיזה זמן
+<strong>[q-main]</strong>
+
+2. מה קדם להופעת הקושי
+<strong>[q-cause]</strong>
+
+3. מה מחמיר ומה מקל
+<strong>[q-modal]</strong>
+
+4. מה עוד מפריע בגוף
+<strong>[q-other]</strong>
+
+5. מחלות בעבר, ניתוחים, מחלות במשפחה
+<strong>[q-history]</strong>
+
+6. מה לוקחים בקביעות ובמשך 48 השעות האחרונות
+<strong>[q-meds]</strong>
+
+7. אנרגיה, שינה, תיאבון, צמא, חום וקור, הזעה
+<strong>[q-general]</strong>
+
+8. מצב רוח, פחדים, מה מרגיע ומה מרגיז
+<strong>[q-mind]</strong>
+
+9. מה מעיק בחיים, ילדות
+<strong>[q-life]</strong>
+
+10. מה מקווים לקבל
+<strong>[q-hope]</strong>
+
+11. במילים שלכם, "כאילו"
+<strong>[q-free]</strong>
