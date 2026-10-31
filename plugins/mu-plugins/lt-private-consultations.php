@@ -325,6 +325,10 @@ function prune_subs( $post_id, array $doctors ) {
 	if ( $post ) {
 		$keep[] = (int) $post->post_author;
 	}
+	// homeoclass.co.il: служебный ящик резервной копии (роль hco_backup) подписки не теряет.
+	foreach ( get_users( array( 'role' => 'hco_backup', 'fields' => 'ID' ) ) as $backup_id ) {
+		$keep[] = (int) $backup_id;
+	}
 	// Закрытую целиком запись не читает никто, и письма о ней не уходят никому.
 	if ( is_locked( $post_id ) ) {
 		$keep = array();

@@ -30,6 +30,12 @@ class LT_Rve_Guard {
 		}
 
 		$user = self::author( $commentdata );
+
+		// Служебный ящик резервной копии только читает: ответ с него в консультацию не попадает.
+		if ( $user && in_array( 'hco_backup', (array) $user->roles, true ) ) {
+			wp_die( esc_html( 'Reply from the backup mailbox is not accepted.' ), '', array( 'response' => 403 ) );
+		}
+
 		if ( ! $user || ! self::expired( $user ) ) {
 			return $commentdata;
 		}
