@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Администраторы получают письма обо всех консультациях
+ * Plugin Name: Гомеопаты получают письма обо всех консультациях
  * Description: При создании консультации (Lt\PostCreated) подписывает на комментарии к ней всех
- *              администраторов, чтобы заявки и ответы клиентов кто-то получал без ручных галочек.
+ *              пользователей с ролью homeopath, чтобы заявки и ответы клиентов кто-то получал без ручных галочек.
  *              Клиент подписан самим Lt (Lt\CommentMailPro). Подписка записывается напрямую в
  *              таблицу Comment Mail, как это делает Lt. Чтобы отключить, удалить этот файл.
  * Version: 1.0
@@ -17,7 +17,7 @@ add_action( 'Lt\PostCreated', function ( $user, $post_id ) {
 		return;
 	}
 
-	foreach ( get_users( array( 'role' => 'administrator' ) ) as $admin ) {
+	foreach ( get_users( array( 'role' => 'homeopath' ) ) as $admin ) {
 		if ( $user && $user->exists() && (int) $admin->ID === (int) $user->ID ) {
 			continue;
 		}
