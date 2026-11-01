@@ -1,0 +1,49 @@
+<strong>שאלון בטן ומעיים</strong>
+מאת: [your-name] [your-surname] [your-email]
+עבור: [for-whom]
+גיל: [age]
+
+1. הבעיה והאבחנה
+<strong>[q1]</strong>
+
+2. כרוני או חד פעמי
+<strong>[q2]</strong>
+
+3. מיקום מדויק
+<strong>[q3]</strong>
+
+4. מתי ומה קרה
+<strong>[q4]</strong>
+
+5. מה לדעתכם גרם
+<strong>[q5]</strong>
+
+6. פתאומי או הדרגתי
+<strong>[q6]</strong>
+
+7. שעות
+<strong>[q7]</strong>
+
+8. נדידה והקרנה
+<strong>[q8]</strong>
+
+9. מה משפיע
+<strong>[q9]</strong>
+
+10. איזה כאב
+<strong>[q10]</strong>
+
+11. איך הכאב משפיע
+<strong>[q11]</strong>
+
+12. בעיה נוספת במקום
+<strong>[q12]</strong>
+
+13. הרגשה אחרי שהכאב עובר
+<strong>[q13]</strong>
+
+14. כל מה שאפשר
+<strong>[q14]</strong>
+
+15. מה לוקחים בקביעות, מחלות כרוניות, אלרגיה, עישון, הריון
+<strong>[q15]</strong>

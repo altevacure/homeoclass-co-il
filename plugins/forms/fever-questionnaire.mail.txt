@@ -1,0 +1,58 @@
+<strong>שאלון חום</strong>
+מאת: [your-name] [your-surname] [your-email]
+עבור: [for-whom]
+גיל: [age]
+
+1. תרופות ורמדיס ב-48 השעות האחרונות
+<strong>[q1]</strong>
+
+2. מדידה
+<strong>[q2]</strong>
+
+3. מתי התחיל ומה גרם
+<strong>[q3]</strong>
+
+4. פתאומי או הדרגתי
+<strong>[q4]</strong>
+
+5. איפה החום
+<strong>[q5]</strong>
+
+6. קור או חום
+<strong>[q6]</strong>
+
+7. מנוחה או תנועה
+<strong>[q7]</strong>
+
+8. תחושות בגוף
+<strong>[q8]</strong>
+
+9. הזעה
+<strong>[q9]</strong>
+
+10. מצב רוח
+<strong>[q10]</strong>
+
+11. צמא
+<strong>[q11]</strong>
+
+12. תיאבון
+<strong>[q12]</strong>
+
+13. הפרשות
+<strong>[q13]</strong>
+
+14. גרון ופה
+<strong>[q14]</strong>
+
+15. כאב גרון
+<strong>[q15]</strong>
+
+16. שיעול
+<strong>[q16]</strong>
+
+17. מה עוד כואב
+<strong>[q17]</strong>
+
+18. מה לוקחים בקביעות, מחלות כרוניות, אלרגיה, עישון, הריון
+<strong>[q18]</strong>

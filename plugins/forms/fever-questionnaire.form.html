@@ -1,0 +1,96 @@
+<style>
+.hq{font-size:16px;line-height:1.7;color:#2b2b2b}
+.hq p{margin:0}
+.hq-note,.hq-warn{margin:0 0 20px;padding:14px 16px;border-radius:3px;font-size:15px;line-height:1.6}
+.hq-note{background:#eef6f3;border-inline-start:3px solid #2f7d6b}
+.hq-warn{background:#f6f4f1;border-inline-start:3px solid #9a3412}
+.hq-card{margin:0 0 32px;padding:20px 22px;background:#faf9f7;border:1px solid #e3e0d9;border-radius:4px}
+.hq-card-t{margin:0 0 18px!important;font-size:18px;font-weight:700}
+.hq-f{margin:0 0 18px}
+.hq-f:last-child{margin:0}
+.hq-l{display:block;margin:0 0 7px;font-weight:600;font-size:15px}
+.hq-h{display:block;margin-top:2px;font-weight:400;font-size:13px;color:#6f6a60}
+.hq-q{margin:0 0 28px}
+.hq-head{display:flex;gap:.55em;margin:0 0 9px}
+.hq-n{flex:0 0 auto;min-width:1.7em;font-weight:700;color:#2f7d6b}
+.hq-t{flex:1 1 auto;min-width:0;font-weight:600}
+.hq label{display:block;margin:0;cursor:pointer}
+.hq input[type="text"],.hq input[type="email"],.hq input[type="tel"],.hq input[type="password"],.hq textarea{width:100%!important;box-sizing:border-box!important;padding:11px 13px!important;font-family:inherit!important;font-size:16px!important;line-height:1.5!important;color:#2b2b2b!important;background:#fff!important;border:1px solid #c9cdd2!important;border-radius:3px!important}
+.hq textarea{min-height:112px;resize:vertical}
+.hq input:focus,.hq textarea:focus{border-color:#2f7d6b!important;outline:none}
+.hq-accept{margin:0 0 22px;padding:16px;background:#faf9f7;border:1px solid #e3e0d9;border-radius:4px;font-size:15px;line-height:1.55}
+.hq-accept .wpcf7-list-item{margin:0}
+.hq-accept label{display:flex;gap:10px;align-items:flex-start;font-weight:400}
+.hq-accept input[type="checkbox"]{flex:0 0 auto!important;width:18px!important;height:18px!important;margin:3px 0 0!important}
+.hq input[type="submit"]{display:block!important;width:100%!important;padding:15px 20px!important;font-family:inherit!important;font-size:17px!important;font-weight:600!important;color:#fff!important;background:#2f7d6b!important;border:0!important;border-radius:3px!important;cursor:pointer}
+.hq input[type="submit"]:hover{background:#256455!important}
+@media (max-width:600px){.hq-card{padding:16px}.hq-q{margin-bottom:24px}}
+</style>
+
+<div class="hq" dir="rtl">
+
+[loggedout]<div class="hq-note"><strong>אין צורך להירשם בנפרד.</strong> ממלאים את השאלון, האזור האישי נפתח מעצמו ומעבירים אתכם אליו. כבר יש לכם אצלנו חשבון? <a href="/wp-login.php?redirect_to=%2Ffever-questionnaire%2F">היכנסו</a>, ולא נבקש סיסמה.</div>[/loggedout]
+
+<div class="hq-warn">חום מעל 39 שלא יורד, חום שנמשך יותר משלושה ימים, צוואר נוקשה, פריחה שלא דוהה בלחיצה, קושי לנשום, בלבול או ישנוניות קיצונית, כל חום אצל תינוק מתחת לגיל שלושה חודשים: קודם רופא או מד"א (101), ואחר כך השאלון. ההומאופת אינו רופא ואינו מחליף טיפול רפואי.</div>
+
+<div class="hq-card">
+
+<div class="hq-card-t">עליכם</div>
+
+<div class="hq-f"><label><span class="hq-l">שם פרטי<span class="hq-h">כדי לפתוח אזור אישי</span></span>[text* your-name default:user_first_name]</label></div>
+
+<div class="hq-f"><label><span class="hq-l">שם משפחה</span>[text* your-surname default:user_last_name]</label></div>
+
+<div class="hq-f"><label><span class="hq-l">דוא"ל</span>[email* your-email default:user_email]</label></div>
+
+[loggedout]<div class="hq-f"><label><span class="hq-l">בחרו סיסמה<span class="hq-h">איתה תיכנסו לאזור האישי</span></span>[password reg-password autocomplete:new-password]</label></div>[/loggedout]
+
+<div class="hq-f"><label><span class="hq-l">עבור מי השאלון<span class="hq-h">אם לא עבורכם, כתבו עבור מי וכמה הוא או היא בני</span></span>[text for-whom]</label></div>
+
+<div class="hq-f"><label><span class="hq-l">גיל<span class="hq-h">שלכם או של מי שזקוק לעזרה</span></span>[text age]</label></div>
+
+[hidden is_consult]
+
+</div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">1</span><span class="hq-t">מה לקחתם ב-48 השעות האחרונות: תרופות להורדת חום, תרופות אחרות, רמדיס הומאופתיים? באיזו תכנית?</span></span>[textarea q1 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">2</span><span class="hq-t">מדדו עכשיו חום (עדיף לא במד חום אלקטרוני) וכתבו את הקריאה.</span></span>[textarea q2 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">3</span><span class="hq-t">מתי התחילה הבעיה? מה לדעתכם יכול היה לגרום לה?</span></span>[textarea q3 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">4</span><span class="hq-t">החום הופיע פתאום או עלה בהדרגה? הוא יציב לאורך היממה או "קופץ"?</span></span>[textarea q4 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">5</span><span class="hq-t">החום מתפשט בגוף באופן שווה, או שיש אזורים קרים או חמים יותר (ראש, כפות ידיים, כפות רגליים)?</span></span>[textarea q5 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">6</span><span class="hq-t">מה אתם מרגישים: צמרמורת או חום?</span></span>[textarea q6 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">7</span><span class="hq-t">האם קל יותר לנוח, למשל לשכב, או להיות בתנועה?</span></span>[textarea q7 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">8</span><span class="hq-t">תארו תחושות בגוף: כאב, תשישות, חולשה בשרירים או בעצמות, כבדות וכדומה.</span></span>[textarea q8 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">9</span><span class="hq-t">הזעה: אם היא התגברה, איפה ומתי?</span></span>[textarea q9 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">10</span><span class="hq-t">איך השתנה מצב הרוח: אי שקט או אדישות, האטה, רגזנות, רצון להיות לבד או צורך שמישהו יהיה לידכם?</span></span>[textarea q10 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">11</span><span class="hq-t">צמא? כמה אתם שותים? כמה בכל פעם?</span></span>[textarea q11 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">12</span><span class="hq-t">תיאבון? תשוקה למאכלים או לטעמים מסוימים?</span></span>[textarea q12 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">13</span><span class="hq-t">הפרשות מהאף ומהעיניים: תארו.</span></span>[textarea q13 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">14</span><span class="hq-t">איך נראים הגרון והפה?</span></span>[textarea q14 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">15</span><span class="hq-t">כאב גרון? איזה סוג ואיפה?</span></span>[textarea q15 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">16</span><span class="hq-t">שיעול? סוג, אופי ותדירות.</span></span>[textarea q16 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">17</span><span class="hq-t">מה עוד כואב ואיפה? מה הייתם רוצים להוסיף לתיאור המצב?</span></span>[textarea q17 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">18</span><span class="hq-t">מה אתם לוקחים בקביעות: רמדיס הומאופתיים, תרופות, ויטמינים, תוספים? יש מחלות כרוניות, אלרגיה, ניתוחים לאחרונה? מעשנים? יש אבק, עשן, חומרי ניקוי או עובש בבית או בעבודה? נשים: הריון או הנקה.</span></span>[textarea q18 130x4]</label></div>
+
+<div class="hq-accept">[acceptance acceptance-1] קראתי את <a href="/privacy-policy/" target="_blank" rel="noopener">מדיניות הפרטיות</a> ואני מסכים או מסכימה שהפרטים והתשובות יישמרו באזור האישי שלי וייקראו על ידי יהודה כורשן ועוזרתו. [/acceptance]</div>
+
+[submit "שליחה"]
+
+</div>

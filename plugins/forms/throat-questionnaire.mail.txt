@@ -1,0 +1,55 @@
+<strong>שאלון כאב גרון</strong>
+מאת: [your-name] [your-surname] [your-email]
+עבור: [for-whom]
+גיל: [age]
+
+1. תרופות ורמדיס ב-48 השעות האחרונות
+<strong>[q1]</strong>
+
+2. מתי התחיל, מה קדם
+<strong>[q2]</strong>
+
+3. האם היה בעבר
+<strong>[q3]</strong>
+
+4. מיקום
+<strong>[q4]</strong>
+
+5. סוג הכאב
+<strong>[q5]</strong>
+
+6. בליעה
+<strong>[q6]</strong>
+
+7. מה מגביר ומה מקל
+<strong>[q7]</strong>
+
+8. באיזו שעה
+<strong>[q8]</strong>
+
+9. תחושות נוספות, קול
+<strong>[q9]</strong>
+
+10. איך נראים הגרון והפה
+<strong>[q10]</strong>
+
+11. יובש או ריר, ריח
+<strong>[q11]</strong>
+
+12. בלוטות וצוואר
+<strong>[q12]</strong>
+
+13. מה הופיע יחד עם הגרון
+<strong>[q13]</strong>
+
+14. חום, קור, הזעה, צמא, תיאבון, שינה
+<strong>[q14]</strong>
+
+15. הרגשה והתנהגות בזמן המחלה
+<strong>[q15]</strong>
+
+16. במילים שלכם, "כאילו"
+<strong>[q16]</strong>
+
+17. מה לוקחים בקביעות, מחלות כרוניות, אלרגיה, עישון, הריון
+<strong>[q17]</strong>

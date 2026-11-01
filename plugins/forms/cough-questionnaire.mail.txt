@@ -1,0 +1,52 @@
+<strong>שאלון שיעול</strong>
+מאת: [your-name] [your-surname] [your-email]
+עבור: [for-whom]
+גיל: [age]
+
+1. תרופות ורמדיס ב-48 השעות האחרונות
+<strong>[q1]</strong>
+
+2. מתי התחיל, מה קדם, איך משתנה
+<strong>[q2]</strong>
+
+3. האם היה בעבר
+<strong>[q3]</strong>
+
+4. איזה שיעול
+<strong>[q4]</strong>
+
+5. מה מעורר ומגביר
+<strong>[q5]</strong>
+
+6. מה מקל או עוצר התקף
+<strong>[q6]</strong>
+
+7. באיזו שעה, כמה התקפים
+<strong>[q7]</strong>
+
+8. מאיפה בא השיעול
+<strong>[q8]</strong>
+
+9. מה קורה בגוף בזמן שיעול
+<strong>[q9]</strong>
+
+10. ליחה
+<strong>[q10]</strong>
+
+11. גרון, פה, קול
+<strong>[q11]</strong>
+
+12. מה עוד מפריע
+<strong>[q12]</strong>
+
+13. חום, קור, הזעה, צמא, תיאבון, שינה
+<strong>[q13]</strong>
+
+14. הרגשה והתנהגות בזמן המחלה
+<strong>[q14]</strong>
+
+15. במילים שלכם, "כאילו"
+<strong>[q15]</strong>
+
+16. מה לוקחים בקביעות, מחלות כרוניות, אלרגיה, עישון, הריון
+<strong>[q16]</strong>

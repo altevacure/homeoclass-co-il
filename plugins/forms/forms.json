@@ -1,0 +1,22 @@
+[
+ {
+  "slug": "cough-questionnaire",
+  "title": "שאלון שיעול"
+ },
+ {
+  "slug": "throat-questionnaire",
+  "title": "שאלון כאב גרון"
+ },
+ {
+  "slug": "ear-questionnaire",
+  "title": "שאלון כאב אוזניים"
+ },
+ {
+  "slug": "fever-questionnaire",
+  "title": "שאלון חום"
+ },
+ {
+  "slug": "digestion-questionnaire",
+  "title": "שאלון בטן ומעיים"
+ }
+]
