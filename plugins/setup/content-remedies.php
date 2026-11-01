@@ -26,7 +26,32 @@ function hco_upsert_page( $slug, $title, $content, $parent = 0, $order = 0 ) {
 $parent = hco_upsert_page( 'remedies', 'רמדיס הומאופתיים: מה זה רמדי ואיך משתמשים בו', hco_read( "$dir/index.html" ) );
 
 // Страницы средств аптечки: слаг => заголовок.
-$articles = array();
+$articles = array(
+	'arnica' => 'Arnica (ארניקה): רמדי הומאופתי למכות, לחבלות ולהלם',
+	'aconitum' => 'Aconitum (אקוניטום): רמדי הומאופתי לבהלה ולחום פתאומי',
+	'apis' => 'Apis (אפיס): רמדי הומאופתי לעקיצת דבורה ולנפיחות',
+	'arsenicum-album' => 'Arsenicum album (ארסניקום אלבום): רמדי הומאופתי להרעלת מזון, לשלשול ולחולשה',
+	'belladonna' => 'Belladonna (בלדונה): רמדי הומאופתי לחום גבוה, לכאב גרון ולמכת שמש',
+	'bryonia' => 'Bryonia (בריוניה): רמדי הומאופתי לשיעול יבש ולשפעת עם כאבים',
+	'calendula' => 'Calendula (קלנדולה): רמדי הומאופתי לפצעים ולחתכים',
+	'cantharis' => 'Cantharis (קנתריס): רמדי הומאופתי לכוויות ולצריבה בשתן',
+	'carbo-vegetabilis' => 'Carbo vegetabilis (קרבו וג׳): רמדי הומאופתי לנפיחות בבטן ולחולשה',
+	'chamomilla' => 'Chamomilla (קמומילה): רמדי הומאופתי לבקיעת שיניים, לקוליק ולכאב אוזן',
+	'china' => 'China (צ׳ינה): רמדי הומאופתי לחולשה אחרי שלשול ואיבוד נוזלים',
+	'cocculus' => 'Cocculus (קוקולוס): רמדי הומאופתי למחלת ים ולעייפות מחוסר שינה',
+	'drosera' => 'Drosera (דרוזרה): רמדי הומאופתי לשיעול בהתקפים',
+	'ferrum-phosphoricum' => 'Ferrum phosphoricum (פרום פוספוריקום): רמדי הומאופתי לשלב הראשון של חום ודלקת',
+	'gelsemium' => 'Gelsemium (ג׳לסמיום): רמדי הומאופתי לשפעת, לחולשה ולפחד במה',
+	'hepar-sulphuris' => 'Hepar sulphuris (הפר סולפור): רמדי הומאופתי לדלקת אוזניים, למורסה ולשיעול נובח',
+	'hypericum' => 'Hypericum (היפריקום): רמדי הומאופתי לפגיעה בעצבים, באצבעות ובעצם הזנב',
+	'ignatia' => 'Ignatia (איגנציה): רמדי הומאופתי לאבל, לאכזבה ולבהלה',
+	'ipecacuanha' => 'Ipecacuanha (איפקה): רמדי הומאופתי לבחילות ולהקאות',
+	'ledum' => 'Ledum (לדום): רמדי הומאופתי לעקיצות יתושים ולדקירות',
+	'nux-vomica' => 'Nux vomica (נוקס וומיקה): רמדי הומאופתי לבחילה, להאנג-אובר ולעצבנות',
+	'pulsatilla' => 'Pulsatilla (פולסטילה): רמדי הומאופתי לנזלת, לשיעול ולילדים בכייניים',
+	'rhus-toxicodendron' => 'Rhus toxicodendron (רוס טוקס): רמדי הומאופתי לנוקשות, לנקעים ולשפעת עם כאבים',
+	'ruta' => 'Ruta (רוטה): רמדי הומאופתי לגידים, לנקעים ולעייפות עיניים',
+);
 $order    = 0;
 foreach ( $articles as $slug => $title ) {
 	$id = hco_upsert_page( $slug, $title, hco_read( "$dir/$slug.html" ), $parent, ++$order );
