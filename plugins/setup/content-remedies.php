@@ -51,6 +51,13 @@ $articles = array(
 	'pulsatilla' => 'Pulsatilla (פולסטילה): רמדי הומאופתי לנזלת, לשיעול ולילדים בכייניים',
 	'rhus-toxicodendron' => 'Rhus toxicodendron (רוס טוקס): רמדי הומאופתי לנוקשות, לנקעים ולשפעת עם כאבים',
 	'ruta' => 'Ruta (רוטה): רמדי הומאופתי לגידים, לנקעים ולעייפות עיניים',
+	'symphytum' => 'Symphytum (סימפיטום): רמדי הומאופתי למכה בעין ולעצמות אחרי שבר',
+	'urtica-urens' => 'Urtica urens (אורטיקה): רמדי הומאופתי לכוויות קלות, לגירוד ולסרפדת',
+	'allium-cepa' => 'Allium cepa (בצל): רמדי הומאופתי לנזלת מימית ולאלרגיה עונתית',
+	'spongia' => 'Spongia (ספונגיה): רמדי הומאופתי לשיעול נובח ולצרידות',
+	'bellis-perennis' => 'Bellis perennis (בליס): רמדי הומאופתי למכה עמוקה ולחבלה אחרי ניתוח',
+	'staphysagria' => 'Staphysagria (סטפיסגריה): רמדי הומאופתי לחתך נקי, אחרי ניתוח ולעלבון',
+	'antimonium-tartaricum' => 'Antimonium tartaricum (אנטימוניום טרטריקום): רמדי הומאופתי לשיעול עם קרקור בחזה',
 );
 $order    = 0;
 foreach ( $articles as $slug => $title ) {
