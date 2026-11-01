@@ -1,0 +1,121 @@
+<strong>שאלון ראשוני לילדים</strong>
+מאת: [your-name] [your-surname] [your-email]
+עבור: [child-name]
+גיל: [child-age]
+
+<strong>התלונה העיקרית</strong>
+
+1. מה מפריע
+<strong>[q1]</strong>
+
+2. מתי התחיל ומה גרם
+<strong>[q2]</strong>
+
+3. אבחנה ותרופות
+<strong>[q3]</strong>
+
+4. בעבר
+<strong>[q4]</strong>
+
+<strong>משפחה והיריון</strong>
+
+5. אחים ואחיות
+<strong>[q5]</strong>
+
+6. בעיות בהיריון
+<strong>[q6]</strong>
+
+7. לידה
+<strong>[q7]</strong>
+
+8. התקופה בהיריון ובחודשים הראשונים
+<strong>[q8]</strong>
+
+9. חלומות
+<strong>[q9]</strong>
+
+<strong>היסטוריה ומהלך המחלה</strong>
+
+10. מחלות בעבר
+<strong>[q10]</strong>
+
+11. איך המצב מתבטא עכשיו
+<strong>[q11]</strong>
+
+12. מה מגביר ומה מקל
+<strong>[q12]</strong>
+
+13. מה משפיע על מצבו הכללי
+<strong>[q13]</strong>
+
+<strong>אופי והתנהגות</strong>
+
+14. איך הילד באופיו
+<strong>[q14]</strong>
+
+15. רגישות לכאב ולגירויים
+<strong>[q15]</strong>
+
+16. רגישות לאחרים ולסביבה
+<strong>[q16]</strong>
+
+17. למי הוא דומה
+<strong>[q17]</strong>
+
+18. מה מיוחד בו
+<strong>[q18]</strong>
+
+19. בזמן מצוקה
+<strong>[q19]</strong>
+
+20. פגיעוּת וטינה
+<strong>[q20]</strong>
+
+21. דמיון
+<strong>[q21]</strong>
+
+22. פחדים
+<strong>[q22]</strong>
+
+23. מה מצער אותו
+<strong>[q23]</strong>
+
+24. מה משמח אותו
+<strong>[q24]</strong>
+
+25. משחקים
+<strong>[q25]</strong>
+
+26. ספרים וסרטים
+<strong>[q26]</strong>
+
+27. חברים וסכסוכים
+<strong>[q27]</strong>
+
+28. חלומות של הילד
+<strong>[q28]</strong>
+
+<strong>אוכל ושינה</strong>
+
+29. מה אוהב לאכול
+<strong>[q29]</strong>
+
+30. ממה מסרב
+<strong>[q30]</strong>
+
+31. שינה
+<strong>[q31]</strong>
+
+32. חם או קר
+<strong>[q32]</strong>
+
+<strong>תוספות</strong>
+
+33. מה עוד
+<strong>[q33]</strong>
+
+34. צילומים
+<strong>[q34]</strong>
+
+35. מה לוקחים בקביעות, מחלות כרוניות, אלרגיה, עישון, הריון
+<strong>[q35]</strong>

@@ -18,5 +18,13 @@
  {
   "slug": "digestion-questionnaire",
   "title": "שאלון בטן ומעיים"
+ },
+ {
+  "slug": "children-questionnaire",
+  "title": "שאלון ראשוני לילדים"
+ },
+ {
+  "slug": "infant-questionnaire",
+  "title": "שאלון ראשוני לתינוקות"
  }
 ]

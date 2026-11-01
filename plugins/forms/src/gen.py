@@ -13,6 +13,8 @@ tail = base[base.index('<div class="hq-accept">'):]
 
 BG = ('מה אתם לוקחים בקביעות: רמדיס הומאופתיים, תרופות, ויטמינים, תוספים? יש מחלות כרוניות, אלרגיה, ניתוחים לאחרונה? '
       'מעשנים? יש אבק, עשן, חומרי ניקוי או עובש בבית או בעבודה? נשים: הריון או הנקה.')
+BG_CHILD = ('מה הילד לוקח בקביעות: רמדיס הומאופתיים, תרופות, ויטמינים, תוספים? יש מחלות כרוניות, אלרגיה, ניתוחים? '
+            'יש בבית אבק, עשן, חומרי ניקוי או עובש? מעשנים בבית? ואם את בהיריון או מניקה, כתבו גם את זה.')
 BG_LABEL = 'מה לוקחים בקביעות, מחלות כרוניות, אלרגיה, עישון, הריון'
 
 
@@ -25,10 +27,24 @@ def build(f):
     h = head.replace('%2Fgeneral-primary%2F', '%2F' + slug + '%2F')
     h = re.sub(r'(<div class="hq-warn">).*?(</div>)',
                lambda m: m.group(1) + esc(f['warn']) + ' ההומאופת אינו רופא ואינו מחליף טיפול רפואי.' + m.group(2), h, count=1, flags=re.S)
-    qs = list(f['qs']) + [[BG_LABEL, BG]]
+    mail_who = 'עבור: [for-whom]\nגיל: [age]'
+    if f.get('child'):
+        h = h.replace('שם פרטי<span', 'שם פרטי של ההורה<span').replace('<span class="hq-l">שם משפחה</span>', '<span class="hq-l">שם משפחה של ההורה</span>').replace('>עליכם<', '>פרטי ההורה והילד<')
+        h = re.sub(r'<div class="hq-f"><label><span class="hq-l">עבור מי השאלון.*?\[text age\]</label></div>',
+                   lambda m: '<div class="hq-f"><label><span class="hq-l">שם הילד</span>[text* child-name]</label></div>\n\n'
+                             '<div class="hq-f"><label><span class="hq-l">%s</span>[text child-age]</label></div>' % f['child'], h, flags=re.S)
+        mail_who = 'עבור: [child-name]\nגיל: [child-age]'
+    qs = list(f['qs']) + [[BG_LABEL, BG_CHILD if f.get('child') else BG]]
     body = ''
-    mail = '<strong>%s</strong>\nמאת: [your-name] [your-surname] [your-email]\nעבור: [for-whom]\nגיל: [age]\n\n' % f['title']
-    for i, (label, text) in enumerate(qs, 1):
+    mail = '<strong>%s</strong>\nמאת: [your-name] [your-surname] [your-email]\n%s\n\n' % (f['title'], mail_who)
+    i = 0
+    for q in qs:
+        if len(q) == 1:
+            body += '<div class="hq-card-t">%s</div>\n\n' % esc(q[0])
+            mail += '<strong>%s</strong>\n\n' % q[0]
+            continue
+        label, text = q
+        i += 1
         name = 'q%d' % i
         body += ('<div class="hq-q"><label><span class="hq-head"><span class="hq-n">%d</span><span class="hq-t">%s</span></span>'
                  '[textarea %s 130x4]</label></div>\n\n' % (i, esc(text), name))

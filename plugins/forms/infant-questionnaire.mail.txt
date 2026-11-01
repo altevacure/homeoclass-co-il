@@ -1,0 +1,76 @@
+<strong>שאלון ראשוני לתינוקות</strong>
+מאת: [your-name] [your-surname] [your-email]
+עבור: [child-name]
+גיל: [child-age]
+
+<strong>התלונה העיקרית</strong>
+
+1. מה מפריע
+<strong>[q1]</strong>
+
+2. מתי התחיל ומה גרם
+<strong>[q2]</strong>
+
+3. מה מגביר
+<strong>[q3]</strong>
+
+4. באיזו שעה
+<strong>[q4]</strong>
+
+5. תסמינים נלווים
+<strong>[q5]</strong>
+
+<strong>משפחה והיריון</strong>
+
+6. ילדים והפלות
+<strong>[q6]</strong>
+
+7. היריון
+<strong>[q7]</strong>
+
+8. לידה
+<strong>[q8]</strong>
+
+<strong>חיסונים ועור</strong>
+
+9. חיסונים
+<strong>[q9]</strong>
+
+10. פריחות
+<strong>[q10]</strong>
+
+<strong>שינה, אוכל ויציאות</strong>
+
+11. שינה
+<strong>[q11]</strong>
+
+12. תיאבון
+<strong>[q12]</strong>
+
+13. יציאות
+<strong>[q13]</strong>
+
+<strong>התנהגות והתפתחות</strong>
+
+14. מצב נפשי
+<strong>[q14]</strong>
+
+15. הזנה
+<strong>[q15]</strong>
+
+16. התפתחות
+<strong>[q16]</strong>
+
+17. מראה
+<strong>[q17]</strong>
+
+<strong>תוספות</strong>
+
+18. מה עוד
+<strong>[q18]</strong>
+
+19. צילומים
+<strong>[q19]</strong>
+
+20. מה לוקחים בקביעות, מחלות כרוניות, אלרגיה, עישון, הריון
+<strong>[q20]</strong>

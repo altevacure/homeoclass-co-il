@@ -1,0 +1,142 @@
+<style>
+.hq{font-size:16px;line-height:1.7;color:#2b2b2b}
+.hq p{margin:0}
+.hq-note,.hq-warn{margin:0 0 20px;padding:14px 16px;border-radius:3px;font-size:15px;line-height:1.6}
+.hq-note{background:#eef6f3;border-inline-start:3px solid #2f7d6b}
+.hq-warn{background:#f6f4f1;border-inline-start:3px solid #9a3412}
+.hq-card{margin:0 0 32px;padding:20px 22px;background:#faf9f7;border:1px solid #e3e0d9;border-radius:4px}
+.hq-card-t{margin:0 0 18px!important;font-size:18px;font-weight:700}
+.hq-f{margin:0 0 18px}
+.hq-f:last-child{margin:0}
+.hq-l{display:block;margin:0 0 7px;font-weight:600;font-size:15px}
+.hq-h{display:block;margin-top:2px;font-weight:400;font-size:13px;color:#6f6a60}
+.hq-q{margin:0 0 28px}
+.hq-head{display:flex;gap:.55em;margin:0 0 9px}
+.hq-n{flex:0 0 auto;min-width:1.7em;font-weight:700;color:#2f7d6b}
+.hq-t{flex:1 1 auto;min-width:0;font-weight:600}
+.hq label{display:block;margin:0;cursor:pointer}
+.hq input[type="text"],.hq input[type="email"],.hq input[type="tel"],.hq input[type="password"],.hq textarea{width:100%!important;box-sizing:border-box!important;padding:11px 13px!important;font-family:inherit!important;font-size:16px!important;line-height:1.5!important;color:#2b2b2b!important;background:#fff!important;border:1px solid #c9cdd2!important;border-radius:3px!important}
+.hq textarea{min-height:112px;resize:vertical}
+.hq input:focus,.hq textarea:focus{border-color:#2f7d6b!important;outline:none}
+.hq-accept{margin:0 0 22px;padding:16px;background:#faf9f7;border:1px solid #e3e0d9;border-radius:4px;font-size:15px;line-height:1.55}
+.hq-accept .wpcf7-list-item{margin:0}
+.hq-accept label{display:flex;gap:10px;align-items:flex-start;font-weight:400}
+.hq-accept input[type="checkbox"]{flex:0 0 auto!important;width:18px!important;height:18px!important;margin:3px 0 0!important}
+.hq input[type="submit"]{display:block!important;width:100%!important;padding:15px 20px!important;font-family:inherit!important;font-size:17px!important;font-weight:600!important;color:#fff!important;background:#2f7d6b!important;border:0!important;border-radius:3px!important;cursor:pointer}
+.hq input[type="submit"]:hover{background:#256455!important}
+@media (max-width:600px){.hq-card{padding:16px}.hq-q{margin-bottom:24px}}
+</style>
+
+<div class="hq" dir="rtl">
+
+[loggedout]<div class="hq-note"><strong>אין צורך להירשם בנפרד.</strong> ממלאים את השאלון, האזור האישי נפתח מעצמו ומעבירים אתכם אליו. כבר יש לכם אצלנו חשבון? <a href="/wp-login.php?redirect_to=%2Fchildren-questionnaire%2F">היכנסו</a>, ולא נבקש סיסמה.</div>[/loggedout]
+
+<div class="hq-warn">קושי לנשום, כאב חזק מאוד, דימום, איבוד הכרה או בלבול, חום שלא יורד, כל החמרה פתאומית אצל תינוק מתחת לגיל שנה: קודם רופא או מד"א (101), ואחר כך השאלון. ההומאופת אינו רופא ואינו מחליף טיפול רפואי.</div>
+
+<div class="hq-card">
+
+<div class="hq-card-t">פרטי ההורה והילד</div>
+
+<div class="hq-f"><label><span class="hq-l">שם פרטי של ההורה<span class="hq-h">כדי לפתוח אזור אישי</span></span>[text* your-name default:user_first_name]</label></div>
+
+<div class="hq-f"><label><span class="hq-l">שם משפחה של ההורה</span>[text* your-surname default:user_last_name]</label></div>
+
+<div class="hq-f"><label><span class="hq-l">דוא"ל</span>[email* your-email default:user_email]</label></div>
+
+[loggedout]<div class="hq-f"><label><span class="hq-l">בחרו סיסמה<span class="hq-h">איתה תיכנסו לאזור האישי</span></span>[password reg-password autocomplete:new-password]</label></div>[/loggedout]
+
+<div class="hq-f"><label><span class="hq-l">שם הילד</span>[text* child-name]</label></div>
+
+<div class="hq-f"><label><span class="hq-l">גיל הילד</span>[text child-age]</label></div>
+
+[hidden is_consult]
+
+</div>
+
+<div class="hq-card-t">התלונה העיקרית</div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">1</span><span class="hq-t">תארו את התלונה העיקרית.</span></span>[textarea q1 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">2</span><span class="hq-t">מתי התחילה הבעיה? מה לדעתכם גרם לה?</span></span>[textarea q2 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">3</span><span class="hq-t">אם יש לכם את הנתונים, כתבו אותם: אבחנה, תרופות שהילד לוקח עם שמות ומינונים.</span></span>[textarea q3 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">4</span><span class="hq-t">באיזו תדירות היו בעיות כאלה בעבר, כמה זמן נמשכו ומה נתתם לילד?</span></span>[textarea q4 130x4]</label></div>
+
+<div class="hq-card-t">משפחה והיריון</div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">5</span><span class="hq-t">כמה ילדים במשפחה? ציינו גילים ומין. זה חשוב, למשל כדי להבין אם משחק מסוים הוא יוזמה של הילד או שהוא משחק בו עם הגדולים.</span></span>[textarea q5 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">6</span><span class="hq-t">האם היו בעיות בהיריון? אילו?</span></span>[textarea q6 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">7</span><span class="hq-t">האם היו סיבוכים בלידה?</span></span>[textarea q7 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">8</span><span class="hq-t">נסו להיזכר בתקופה של ההיריון ובחודשים הראשונים אחרי הלידה. אילו חוויות היו קשורות למשפחה, לעבודה, לילדים האחרים וכדומה, ואיך השתנה מצב הרוח?</span></span>[textarea q8 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">9</span><span class="hq-t">היזכרו ותארו חלומות שחזרו או שהשפיעו עליכם במיוחד בזמן ההיריון ובשנה הראשונה אחרי הלידה.</span></span>[textarea q9 130x4]</label></div>
+
+<div class="hq-card-t">היסטוריה ומהלך המחלה</div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">10</span><span class="hq-t">אילו מחלות הילד עבר בעבר?</span></span>[textarea q10 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">11</span><span class="hq-t">איך המצב מתבטא בתקופה הזו? האם זה מפריע לילד עצמו? איך משתנים ההתנהגות והמראה שלו כשהמצב מחמיר?</span></span>[textarea q11 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">12</span><span class="hq-t">מה מקל ומה מגביר את הביטויים: עונת השנה, שעה ביום, מזג אוויר, תנוחת גוף, קור, חום, פעילות, תנועה, אוכל, הטלת שתן, יציאות, חוויות רגשיות וכדומה?</span></span>[textarea q12 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">13</span><span class="hq-t">מה משפיע על מצבו הכללי של הילד ואיך? למשל: נבהל מרעש פתאומי, לא סובל קור, עצבני אחרי שנת צהריים וכדומה.</span></span>[textarea q13 130x4]</label></div>
+
+<div class="hq-card-t">אופי והתנהגות</div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">14</span><span class="hq-t">עד כמה הילד רגיש, חסר מנוחה, פעלתן, איטי, ביישן, מתבייש, מגושם, תוקפני, חברותי, צייתן או סורר?</span></span>[textarea q14 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">15</span><span class="hq-t">רגישות לכאב, לחבלות, לרעש, למגע ולגירויים אחרים.</span></span>[textarea q15 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">16</span><span class="hq-t">רגישות לכאב של אחרים, לריבים של ההורים, למזג האוויר, לסרטים, לסיפורים עצובים?</span></span>[textarea q16 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">17</span><span class="hq-t">למי הילד דומה בחזות ובאופי? במה בדיוק?</span></span>[textarea q17 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">18</span><span class="hq-t">מה מיוחד בילד שלכם ובמה הוא שונה מילדים אחרים?</span></span>[textarea q18 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">19</span><span class="hq-t">כשהוא במצוקה רגשית או בלחץ, האם הוא דורש תשומת לב ונחמה או מתקרר מעצמו?</span></span>[textarea q19 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">20</span><span class="hq-t">באיזו תדירות הוא נעלב והאם הוא נושא טינה?</span></span>[textarea q20 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">21</span><span class="hq-t">האם הוא נוטה לדמיין? תנו דוגמאות לדמיונות.</span></span>[textarea q21 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">22</span><span class="hq-t">ממה הילד פוחד: חושך, בעלי חיים, גובה, להישאר לבד וכדומה?</span></span>[textarea q22 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">23</span><span class="hq-t">אילו מצבים מצערים את הילד ואיך הוא מתנהג אז?</span></span>[textarea q23 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">24</span><span class="hq-t">אילו מצבים משמחים את הילד ואיך הוא מתנהג אז?</span></span>[textarea q24 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">25</span><span class="hq-t">באילו משחקים ובאילו צעצועים הוא אוהב לשחק? משחק לבד או שחייבים בן זוג למשחק? מוביל או מובל? משחק עם קטנים או עם בני גילו? אילו משחקים הוא מעדיף: יצירתיים, משחקי תפקידים, פאזלים, לגו, ציור, תנועה וכדומה?</span></span>[textarea q25 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">26</span><span class="hq-t">ספרים וסרטי אנימציה אהובים? אילו רגעים בהם הוא אוהב, מה לא אוהב ומה מפחיד אותו?</span></span>[textarea q26 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">27</span><span class="hq-t">איך הילד מתנהג עם ילדים אחרים ואיך הוא פותר סכסוכים?</span></span>[textarea q27 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">28</span><span class="hq-t">האם הילד סיפר על חלומות שלו? נסו להיזכר.</span></span>[textarea q28 130x4]</label></div>
+
+<div class="hq-card-t">אוכל ושינה</div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">29</span><span class="hq-t">אילו מאכלים ומוצרים הילד אוהב במיוחד?</span></span>[textarea q29 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">30</span><span class="hq-t">מאיזה אוכל הוא מסרב בתוקף?</span></span>[textarea q30 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">31</span><span class="hq-t">איך הילד נרדם וישן: בקלות, בשקט, בחוסר מנוחה, מתגלה, דורש תשומת לב וכדומה?</span></span>[textarea q31 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">32</span><span class="hq-t">הילד שלכם "חם" או "קפוא"? תנו דוגמאות.</span></span>[textarea q32 130x4]</label></div>
+
+<div class="hq-card-t">תוספות</div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">33</span><span class="hq-t">מה עוד הייתם רוצים להוסיף?</span></span>[textarea q33 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">34</span><span class="hq-t">אפשר להוסיף כמה תמונות או סרטון קצר: המצב המפריע, הגרון והפה, הפנים והעיניים, פריחה בעור, התקף שיעול, תגובה אופיינית. העלו לענן ושלחו קישור בהודעה בכתובת ask@homeoclass.co.il. לא חובה.</span></span>[textarea q34 130x4]</label></div>
+
+<div class="hq-q"><label><span class="hq-head"><span class="hq-n">35</span><span class="hq-t">מה הילד לוקח בקביעות: רמדיס הומאופתיים, תרופות, ויטמינים, תוספים? יש מחלות כרוניות, אלרגיה, ניתוחים? יש בבית אבק, עשן, חומרי ניקוי או עובש? מעשנים בבית? ואם את בהיריון או מניקה, כתבו גם את זה.</span></span>[textarea q35 130x4]</label></div>
+
+<div class="hq-accept">[acceptance acceptance-1] קראתי את <a href="/privacy-policy/" target="_blank" rel="noopener">מדיניות הפרטיות</a> ואני מסכים או מסכימה שהפרטים והתשובות יישמרו באזור האישי שלי וייקראו על ידי יהודה כורשן ועוזרתו. [/acceptance]</div>
+
+[submit "שליחה"]
+
+</div>
